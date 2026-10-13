@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>РџСЂРѕРІРµСЂРєР° РєРѕС€РµР»СЊРєР° В· TON Testnet</title>
+<title>Проверка кошелька · TON Testnet</title>
 <style>
   :root {
     --bg: #f4f6f8;
@@ -242,52 +242,52 @@
         <path d="M12 4.4 6 9.1l6 4.4 6-4.4-6-4.7Z" fill="#e4f1fb"/>
       </svg>
     </div>
-    <h1>РџСЂРѕРІРµСЂРєР° РєРѕС€РµР»СЊРєР°<span class="badge">TESTNET</span></h1>
-    <p class="sub">TON В· Telegram Wallet</p>
+    <h1>Проверка кошелька<span class="badge">TESTNET</span></h1>
+    <p class="sub">TON · Telegram Wallet</p>
   </header>
 
   <div class="card">
-    <label class="field-label" for="wallet">ID РєРѕС€РµР»СЊРєР° РёР»Рё TON-Р°РґСЂРµСЃ</label>
+    <label class="field-label" for="wallet">ID кошелька или TON-адрес</label>
     <div class="input-row">
-      <input id="wallet" type="text" placeholder="UQBвЂ¦ РёР»Рё @username" autocomplete="off" spellcheck="false">
-      <button id="checkBtn">РџСЂРѕРІРµСЂРёС‚СЊ</button>
+      <input id="wallet" type="text" placeholder="UQB… или @username" autocomplete="off" spellcheck="false">
+      <button id="checkBtn">Проверить</button>
     </div>
   </div>
 
   <div class="card steps" id="steps" aria-live="polite">
     <div class="progress"><i id="bar"></i></div>
-    <div class="step" id="s1"><span class="dot"></span>РџРѕРґРєР»СЋС‡РµРЅРёРµ Рє СЃРµС‚Рё TON<span class="meta">testnet</span></div>
-    <div class="step" id="s2"><span class="dot"></span>РџСЂРѕРІРµСЂРєР° С„РѕСЂРјР°С‚Р° Р°РґСЂРµСЃР°<span class="meta">base64url</span></div>
-    <div class="step" id="s3"><span class="dot"></span>Р—Р°РїСЂРѕСЃ СЃРѕСЃС‚РѕСЏРЅРёСЏ Р°РєРєР°СѓРЅС‚Р°<span class="meta">getAccountState</span></div>
-    <div class="step" id="s4"><span class="dot"></span>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ С‚СЂР°РЅР·Р°РєС†РёР№<span class="meta">last 20</span></div>
-    <div class="step" id="s5"><span class="dot"></span>Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕС‚С‡С‘С‚Р°<span class="meta">sha256</span></div>
+    <div class="step" id="s1"><span class="dot"></span>Подключение к сети TON<span class="meta">testnet</span></div>
+    <div class="step" id="s2"><span class="dot"></span>Проверка формата адреса<span class="meta">base64url</span></div>
+    <div class="step" id="s3"><span class="dot"></span>Запрос состояния аккаунта<span class="meta">getAccountState</span></div>
+    <div class="step" id="s4"><span class="dot"></span>Синхронизация транзакций<span class="meta">last 20</span></div>
+    <div class="step" id="s5"><span class="dot"></span>Формирование отчёта<span class="meta">sha256</span></div>
   </div>
 
   <div class="card result" id="result">
-    <div class="addr" title="РђРґСЂРµСЃ"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="rAddr"></span></div>
-    <div class="balance-label">Р‘РђР›РђРќРЎ РљРћРЁР•Р›Р¬РљРђ</div>
-    <div class="balance">52 348 в‚ё</div>
+    <div class="addr" title="Адрес"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="rAddr"></span></div>
+    <div class="balance-label">БАЛАНС КОШЕЛЬКА</div>
+    <div class="balance">52 348 ₸</div>
     <span class="usd-pill" id="rUsd"></span>
     <div class="stats">
-      <div class="stat"><div class="k">РљСѓСЂСЃ</div><div class="v">489.6 в‚ё/$</div></div>
-      <div class="stat"><div class="k">РЎС‚Р°С‚СѓСЃ</div><div class="v ok">РђРєС‚РёРІРµРЅ</div></div>
-      <div class="stat"><div class="k">РЎРµС‚СЊ</div><div class="v">TON testnet</div></div>
+      <div class="stat"><div class="k">Курс</div><div class="v">489.6 ₸/$</div></div>
+      <div class="stat"><div class="k">Статус</div><div class="v ok">Активен</div></div>
+      <div class="stat"><div class="k">Сеть</div><div class="v">TON testnet</div></div>
     </div>
-    <div class="tx-title">РџРѕСЃР»РµРґРЅРёРµ РѕРїРµСЂР°С†РёРё</div>
+    <div class="tx-title">Последние операции</div>
     <div class="tx">
-      <div class="ic in">в†“</div>
-      <div class="who"><b>РџРѕРїРѕР»РЅРµРЅРёРµ</b><i>@wallet</i></div>
-      <span class="amt in">+36 000 в‚ё</span>
-    </div>
-    <div class="tx">
-      <div class="ic in">в†“</div>
-      <div class="who"><b>Р’С…РѕРґСЏС‰РёР№ РїРµСЂРµРІРѕРґ</b><i>UQ8fвЂ¦k2Lp</i></div>
-      <span class="amt in">+16 400 в‚ё</span>
+      <div class="ic in">↓</div>
+      <div class="who"><b>Пополнение</b><i>@wallet</i></div>
+      <span class="amt in">+36 000 ₸</span>
     </div>
     <div class="tx">
-      <div class="ic out">в†‘</div>
-      <div class="who"><b>РљРѕРјРёСЃСЃРёСЏ СЃРµС‚Рё</b><i>gas fee</i></div>
-      <span class="amt out">в€’52 в‚ё</span>
+      <div class="ic in">↓</div>
+      <div class="who"><b>Входящий перевод</b><i>UQ8f…k2Lp</i></div>
+      <span class="amt in">+16 400 ₸</span>
+    </div>
+    <div class="tx">
+      <div class="ic out">↑</div>
+      <div class="who"><b>Комиссия сети</b><i>gas fee</i></div>
+      <span class="amt out">−52 ₸</span>
     </div>
     <span class="net-tag">TON TESTNET</span>
   </div>
@@ -295,7 +295,7 @@
   <footer>
     Тестовая сеть TON (testnet).<br>
     Тестовые балансы не имеют реальной ценности.
-      </footer>
+  </footer>
 </div>
 
 <script>
@@ -331,7 +331,7 @@
         setTimeout(() => {
           document.getElementById('rAddr').textContent = v;
           document.getElementById('rUsd').textContent =
-            'в‰€ $' + (KZT / RATE).toFixed(2);
+            '≈ $' + (KZT / RATE).toFixed(2);
           result.classList.add('visible');
           result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           btn.disabled = false;
@@ -345,5 +345,3 @@
 </script>
 </body>
 </html>
-
-
